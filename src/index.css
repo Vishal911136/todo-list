@@ -1,13 +1,120 @@
-body {
+:root{
+  --mainColor: #956384;
+}
+
+
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(171, 39%, 65%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo__container{
+  width: 300px;
+  height: 450px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px black;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.heading{
+  width: 100%;
+  height: 40px;
+  background-color: var(--mainColor);
+  text-align: center;
+  margin-top: 24px;
+  color: white;
+  box-shadow: 0 1px 5px black;
+}
+.input__field{
+  padding: 15px;
+  text-align: center;
+}
+.input__field input{
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  width: 60%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--mainColor);
+}
+.input__field button{
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background-color: var(--mainColor);
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  box-shadow:  0px 1px 4px black, 1px 2px 4px black inset;
+}
+.list__items{
+  padding: 15px 20px;
+}
+.items i{
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--mainColor);
+  margin-right: 8px;
+}
+.items i:hover{
+  color: red;
+}
+.list__items .items strong{
+  font-size: 18px;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ==alert msg == */
+.alert__msg{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -32px;
+  margin-left: -118px;
+  background-color: rgb(255,255,255);
+  box-shadow: 0px 4px 7px -4px;
+  width: 240px;
+  height: 120px;
+  border-radius: 20px;
+}
+.alert__msg .msg{
+  color: black;
+  text-align: center;
+  margin: 25px 0 28px;
+  font-weight: 500;
+}
+.alert__msg .button__div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alert__msg button{
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin-top: 5px;
+  font-weight: 700;
 }
